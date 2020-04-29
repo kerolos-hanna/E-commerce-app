@@ -1,0 +1,220 @@
+/*-------------------------------  General Css  --------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------  Header Section  -------------------------------*/
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.header-contants-h {
+  padding: 0.5% 1%;
+  display: inline-block;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(180, 47, 47);
+  top: 0px;
+  position: fixed;
+  height: 10%;
+}
+
+.header .nav {
+  width: 60%;
+  float: left;
+  list-style: none;
+  text-align: right;
+}
+
+
+.header .nav>li {
+  display: inline-block;
+  text-align: center;
+}
+
+.header .nav>li>a {
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  display: block;
+  padding: 12px 10px;
+  font-family: sans-serif;
+}
+/*
+.header .nav>li>a.active:after {
+  width: 100%;
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #6195FF;
+  transition: width 0.5s;
+  margin-top: 2px;
+} */
+
+.header .nav>li>a:after {
+  width: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: rgb(46, 248, 214);
+  transition: width 0.5s;
+  margin-top: 2px;
+}
+
+.header .nav>li>a:hover:after {
+  width: 100%;
+}
+
+.header .nav>li>a:hover {
+  opacity: 0.8;
+}
+
+
+
+.registeration {
+  /* background-color: rgb(243, 243, 243); */
+  width: 14%;
+  border: 0.5px solid white;
+  color: black;
+  border-radius: 15px;
+}
+
+.header .h {
+  width: 40%;
+  float: left;
+  margin: 0.2% 0%;
+  color: white;
+  font-size: 28px;
+  font-family: cursive;
+}
+/* ------------------------------------Body Content-------------------------------------- */
+.body-content {
+  width: 80%;
+  margin: 10% auto;
+  height: 400px;
+}
+
+.body-content>h1,
+.about-content>h1,
+.contact-content>h1 {
+  text-align: center;
+  font-size: 60px;
+  padding: 2% 0% 0% 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-content>p,
+.about-content>p {
+  text-align: center;
+  font-size: 40px;
+  margin: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------------About Content-------------------------------------- */
+.about-content {
+  margin: 5% auto 0% auto;
+  background-color: rgb(75, 75, 75);
+  height: 400px;
+}
+
+.about-content>h1 {
+  color: white;
+}
+
+.about-content>p {
+  color: white;
+}
+
+/* ------------------------------------About Content-------------------------------------- */
+.contact-content {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.icon-container {
+  overflow: hidden;
+}
+
+.icons {
+  width: 30%;
+  float: left;
+  /* background-color: cadetblue; */
+}
+
+.icons.mg{
+  margin: 0% 5%;
+}
+
+.icons i {
+  width: 100%;
+  font-size: 55px;
+  margin: auto;
+  padding-left: 40%;
+  color: rgb(180, 47, 47);
+}
+
+
+.contact-content h1 {
+  text-align: center;
+  margin: 2%;
+}
+
+
+.icons h4{
+  text-align: center;
+  font-size: 30px;
+  margin: 2%;
+}
+
+.icons h6{
+  text-align: center;
+  font-size: 16px;
+  margin: 2%;
+}
+
+.icons span {
+  display: block;
+  color: rgb(68, 68, 68);
+  text-align: center;
+}
+
+
+/* ------------------------------------Back To Top-------------------------------------- */
+#top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  border: none;
+  border-radius: 35px;
+  outline: none;
+  font-size: 30px;
+  /* font-weight: bold; */
+  background-color: rgb(180, 47, 47);
+  cursor: pointer;
+}
+
+#top i {
+  position: relative;
+  transition: all 0.1s ease;
+  font-size: 30px;
+}
+
+#top:hover {
+  background: rgba(0, 0, 0, 0.904);
+}
+
+#top:hover i {
+  color: #fff;
+  bottom: 8px;
+}

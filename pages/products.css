@@ -1,0 +1,247 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: teal;
+}
+
+#order-done{
+  width: 40%;
+  text-align: center;
+  margin: 0% 30%;
+  height: 10%;
+  color: rgb(3, 3, 3);
+  position: absolute;
+  background-color: chartreuse;
+  display: none;
+}
+
+#order-done span {
+  width: 100%;
+  font-size: 20px;
+  display: block;
+  margin: 3% auto;
+}
+
+h1{
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  margin: 5% 0% 1% 0%;
+}
+
+h2{
+  font-size: 50px;
+  background-color: tomato;
+  text-align: center;
+  margin: 7% 0% 3% 0%;
+}
+
+.GetProducts-1,
+.GetProducts-2,
+.GetProducts-3,
+.GetProducts-4,
+.results {
+  width: 80%;
+  margin: auto;
+}
+
+.class-1,
+.class-3,
+.class-5,
+.class-7,
+.class-9,
+.class-11,
+.class-13,
+.class-15,
+.items-1,
+.items-3,
+.items-5,
+.items-7,
+.items-9,
+.items-11,
+.items-13,
+.items-15 {
+  width: 50%;
+  float: left;
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+
+.class-2,
+.class-4,
+.class-6,
+.class-8,
+.class-10,
+.class-12,
+.class-14,
+.class-16,
+.items-2,
+.items-4,
+.items-6,
+.items-8,
+.items-10,
+.items-12,
+.items-14,
+.items-16 {
+  margin-left: 50%;
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+img{
+  width: 70%;
+  height: 150px;
+}
+
+.img{
+  text-align: center;
+}
+
+p{
+  text-align: center;
+  width: 80%;
+  padding: 2%;
+  margin: 3% auto;
+  background-color: white;
+  font-size: 22px;
+}
+
+.btn {
+  text-align: center;
+  margin: 2%;
+}
+
+.btn input[type=button] {
+  width: 30%;
+  font-size: 20px;
+  background-color: tomato;
+  border: 1px solid tomato;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: bold;
+}
+
+.btn input[type=button]:active {
+  transform: scale(1.1);
+}
+
+.spanW, .spanP {
+  text-align: center;
+  font-size: 18px;
+  width: 50%;
+  margin: 0% auto;
+  background-color: rgb(252, 131, 110);
+}
+
+
+.spanW {
+  margin-top: 2%;
+}
+
+.spanP {
+  margin-bottom: 2%;
+}
+
+.payment{
+  width: 100%;
+  height: 8%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  margin: 0% auto 3% auto;
+  background-color: rgb(15, 15, 15);
+}
+
+/* .button-check>#Your-Cart, */
+.payment > [type=button] {
+  width: 25%;
+  font-size: 22px;
+  background-color: tomato;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 1% auto 0% auto;
+  transition: 0.25s;
+  width: 12%;
+  display: inline-block;
+}
+
+
+/* .button-check>#Your-Cart:active, */
+.payment>[type=button]:active,
+.button-check i:active{
+  transform: scale(1.1);
+}
+
+.button-check  {
+  width: 100%;
+  height: 10%;
+  margin: auto;
+  text-align: center;
+  background-color: black;
+  position: fixed;
+  top: 0;
+}
+
+.button-check h1 {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  margin: 0% 0% 0% 2%;
+}
+
+.button-check a i{
+  width: 10%; 
+  font-size: 30px;
+  color: #fff;
+  margin: 1% auto;
+  border-radius: 25px;
+  display: none;
+  float: right;
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+#top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  border: none;
+  border-radius: 35px;
+  outline: none;
+  font-size: 30px;
+  /* font-weight: bold; */
+  background-color: white;
+  cursor: pointer;
+}
+
+#top i {
+  position: relative;
+  transition: all 0.1s ease;
+  font-size: 30px;
+}
+
+#top:hover {
+  background: rgba(0, 0, 0, 0.904);
+}
+
+#top:hover i {
+  color: #fff;
+  bottom: 8px;
+}
+
+#totalCost {
+  background-color: white;
+  display: inline-block;
+  width: 50%;
+  font-size: 22px;
+}

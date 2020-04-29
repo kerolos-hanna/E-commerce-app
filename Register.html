@@ -1,0 +1,228 @@
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+
+input[type=text], input[type=password] , input[type=number] {
+width: 20%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus ,input[type=number]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+
+button {
+background-color: rgb(243, 243, 243);
+color: rgb(0, 0, 0) ;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+button:hover {
+opacity:1;
+}
+
+
+.cancelbtn {
+padding: 14px 20px;
+background-color: #d3d3d3;
+}
+
+
+.cancelbtn, .signupbtn {
+float: left;
+width: 10%;
+}
+
+
+.container {
+padding: 16px;
+}
+
+h5, #demo{
+  color: rgb(230, 14, 14);
+  width: 50%;
+}
+
+
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+
+@media screen and (max-width: 300px) {
+.cancelbtn, .signupbtn {
+  width: 100%;
+}
+}
+</style>
+<title>Register</title>
+<body>
+<h1>Register</h1>
+<form action="Login.html" style="border:1px solid #ccc">
+  <div class="container">
+
+  <hr>
+
+  </br>
+
+  <label for="Fname"><b>First Name</b></label>
+    <br>
+    <input type="text" id ="FNametxt" placeholder="First Name" name="Fname" required>
+    <h5 id="h3check"></h5>
+  </br>
+
+
+  </br>
+
+  <label for="Lname"><b>Last Name</b></label>
+    <br>
+    <input type="text" id ="LNametxt" placeholder="Last Name" name="Lname" required>
+    <h5 id="h3check2"></h5>
+  </br>
+
+
+  </br>
+  <label for="phone"><b>Phone Number:</b></label>
+  <br>
+  <input type="text"  id="numb" required  placeholder="Phone" name="phone">
+  <h5 id="check"></h5>
+  </br>
+
+  </br>
+
+  <label for="email"><b>Email</b></label>
+  <br>
+  <input type="text" id="Emailtext" placeholder="Enter Email" name="email" required>
+  <h5 id="h3check3"></h5>
+  </br>
+
+  <label for="psw"><b>Password</b></label>
+  <br>
+  <input type="password" placeholder="Enter Password" name="psw" required>
+  </br>
+
+
+  <br>
+  <label for="birthday"><b>Date Of Birth :<b></label>
+  <input type="date" id="birthday" name="birthday" required>
+
+  <p><b>Select Gender :<b></p>
+  <input type="radio" id="male" name="gender" value="male" required >
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female" required >
+  <label for="female">Female</label>
+  <br>
+  <br>
+
+  <div class="clearfix">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <button type="submit" class="signupbtn" onclick="myFunction();myFunction2();myFunction3();myFunction4()" >Register Now</button>
+  </div>
+  </br>
+  </div>
+</form>
+
+<script>
+  var form = document.querySelector('form');
+  form.addEventListener('submit',function(e){
+    if(myFunction() && myFunction2() && myFunction3() && myFunction4()){
+
+    }
+    else{
+      e.preventDefault();
+    }
+  })
+
+  function myFunction() {
+  var x, text;
+
+  x = document.getElementById("numb").value;
+  console.log("num = ",x)
+  if (isNaN(x) || x == "") {
+    text = "Please insert 11 Digits ";
+    window.check.innerHTML = text;
+    return false;
+  } else {
+    text = "";
+  }
+  window.check.innerHTML = text;
+  return true;
+}
+
+
+function myFunction2() {
+
+  var text = window.FNametxt.value;
+  var patt;
+  patt = /^[a-zA-Z]+$/;
+  var b = patt.test(text);
+  if (b) {
+    window.h3check.innerHTML = "";
+    
+    return true;
+  }
+  window.h3check.innerHTML = "Please insert Character only ";
+  return false;
+
+
+}
+
+
+function myFunction3() {
+
+  var text = window.LNametxt.value;
+  var patt;
+  patt = /^[a-zA-Z]+$/;
+
+  var b = patt.test(text);
+  if (b) {
+    window.h3check2.innerHTML = "";
+    return true;
+  }
+  window.h3check2.innerHTML = "Please insert Character only ";
+  return false
+
+
+}
+
+
+function myFunction4() {
+  var email1 = document.querySelector('#Emailtext').value;
+  console.log(email1)
+  var patt;
+  patt = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  var b = patt.test(email1);
+  if (b) {
+    window.h3check3.innerHTML = "";
+    return true;
+  }
+  window.h3check3.innerHTML = "Please insert Valid Email ";
+  return false;
+}
+
+</script>
+
+
+</body>
+</html>
